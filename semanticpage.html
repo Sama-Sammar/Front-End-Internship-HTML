@@ -1,0 +1,119 @@
+HTML Semantic Page Assignment
+Task: Create a complete HTML page using Semantic Elements that includes the following sections:
+1️⃣ Main Content Section
+Add a <header> with a page title and at least 5 links.
+Add a <nav> below the header with at least 6 navigation links.
+Create a <main> area containing:
+Three articles, each with:
+A heading for the article.
+A paragraph with some content.
+An image.
+A "Read More" link.
+Separate each article with a horizontal line <hr>.
+Add an <aside> (Sidebar) with:
+A heading "Categories".
+An unordered list <ul> with 5 items.
+Add a <footer> with the text:
+Copyright 2025 ©
+2️⃣ Audio Section
+Add an <audio> element that:
+Plays automatically when the page loads.
+Loops continuously.
+Uses at least 3 different file extensions for compatibility.
+Displays a message if the browser does not support audio.
+3️⃣ Video Section
+Add a <video> element that:
+Plays automatically when the page loads.
+Is muted (no sound).
+Shows a poster image before playback.
+Includes at least 3 different file extensions for compatibility.
+Contains captions/subtitles in 2 languages that the user can choose.
+Displays a message if the browser does not support video.
+________________________________________________________________________________
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic Web Page</title>
+</head>
+<body>
+    <header>
+        <h1>Related page links</h1>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/sama-haitham/" target="_blank">Any Link</a></li>
+            <li><a href="https://www.linkedin.com/in/sama-haitham/" target="_blank">Any Link</a></li>
+            <li><a href="https://www.linkedin.com/in/sama-haitham/" target="_blank">Any Link</a></li>
+            <li><a href="https://www.linkedin.com/in/sama-haitham/" target="_blank">Any Link</a></li>
+            <li><a href="https://www.linkedin.com/in/sama-haitham/" target="_blank">Any Link</a></li>
+        </ul>
+    </header> 
+    <nav>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/sama-haitham/" target="_blank">Any Link</a></li>
+            <li><a href="https://www.linkedin.com/in/sama-haitham/" target="_blank">Any Link</a></li>
+            <li><a href="https://www.linkedin.com/in/sama-haitham/" target="_blank">Any Link</a></li>
+            <li><a href="https://www.linkedin.com/in/sama-haitham/" target="_blank">Any Link</a></li>
+            <li><a href="https://www.linkedin.com/in/sama-haitham/" target="_blank">Any Link</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <article>
+                <h2>Article 1 Title</h2>
+                <p>This is some content for article 1. It explains the main idea briefly.</p>
+                <img src="Screenshot 2025-11-04 110915.png" alt="Article 1 Image">
+                <p><a href="https://www.youtube.com/watch?v=3xd1IQ3llBk" target="_blank">Read More</a></p>
+            </article>
+            <hr>
+            <article>
+                <h2>Article 2 Title</h2>
+                <p>This is some content for article 2. It explains the main idea briefly.</p>
+                <img src="Screenshot 2025-11-04 110915.png" alt="Article 2 Image">
+                <p><a href="https://www.youtube.com/watch?v=3xd1IQ3llBk" target="_blank">Read More</a></p>
+            </article>
+            <hr>
+            <article>
+                <h2>Article 3 Title</h2>
+                <p>This is some content for article 3. It explains the main idea briefly.</p>
+                <img src="Screenshot 2025-11-04 110915.png" alt="Article 3 Image">
+                <p><a href="https://www.youtube.com/watch?v=3xd1IQ3llBk" target="_blank">Read More</a></p>
+            </article>
+        </section>
+        <aside>
+          <h2>Categories</h2>
+            <ul>
+                <li>Category 1</li>
+                <li>Category 2</li>
+                <li>Category 3</li>
+                <li>Category 4</li>
+                <li>Category 5</li>
+            </ul>  
+        </aside>
+    </main>
+    <section>
+        <h2>Audio</h2>
+        <audio loop autoplay controls>
+            <source src="حمود الخضر - يا هلا بالحلم ٢٠٢٥ -  تخرج.mp3" type="audio/mpeg">
+            <source src="audio.ogg" type="audio/ogg">
+            <source src="audio.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </section>
+    <section>
+        <h2>Video</h2>
+        <video autoplay muted controls poster="Screenshot 2025-11-04 110915.png" width="500" height="500">
+            <source src="D:\Learning_HTML\1918465-uhd_3840_2160_24fps.mp4" type="video/mp4">
+            <source src="video.ogg" type="video/ogg">
+            <source src="video.webm" type="video/webm">
+
+            <track src="captions_en.vtt" kind="subtitles" srclang="en" label="English" default>
+            <track src="captions_es.vtt" kind="subtitles" srclang="es" label="Spanish">
+            Your browser does not support the video element.
+        </video>
+    </section>
+    <footer>
+        <p>Copyright 2025 &copy;</p>
+    </footer>
+</body>
+</html>
