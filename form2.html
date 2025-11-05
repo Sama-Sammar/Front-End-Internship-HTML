@@ -1,0 +1,130 @@
+🧩 Part 1 — Basic Form Inputs
+Create a form that contains three input fields:
+Token
+Email
+Username
+Requirements:
+The Token field must be hidden and contain this value: b92f1fc2fce391ad7af633723afd3055
+The Email field must be read-only (cannot be edited) and contain this value: o@o.com
+When the page opens, the cursor (focus) must automatically appear in the Username field.
+The Username field must:
+Be required
+Accept between 5 and 20 characters only
+Each field must have a label above it.
+Add two buttons:
+One to empty all fields → name it Empty
+One to send the data → name it Send
+The form should send data to the same page.
+Use the method so the submitted data appears in the URL (Query String).
+🧩 Part 2 — Skills and Job Selection
+Add a checkbox group named skills that allows users to select multiple skills.
+Example options:
+Problem Solving
+Logical Thinking
+Advanced Search
+Analysis
+Planning
+✅ Make sure:
+Each option has its own <label> connected to the checkbox (clicking the label selects the box).
+At least one option is checked by default.
+Add a radio button group named job that allows users to select only one job title.
+Example options:
+Front-End Developer
+Back-End Developer
+Business Analyst
+Project Manager
+Scrum Master
+✅ Make sure:
+Each radio button has its own <label> connected to it.
+At least one option is checked by default.
+🧩 Part 3 — Programming Field & Description
+Create a dropdown list (select) named field, containing programming languages and web development as options.
+Example:
+Python 
+Java 
+C++ 
+HTML
+CSS
+JS
+Below that, create a textarea named brief that allows users to write a long message.
+It should contain default text:
+"Write Here Why You Want To Learn Programming"
+__________________________________________________________________________________________________________________________
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Assignment2</title>
+</head>
+<body>
+    <form method="get">
+
+        <input type="hidden" name="token" value="b92f1fc2fce391ad7af633723afd3055">
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" value="o@o.com" readonly>
+        <hr>
+
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" required autofocus minlength="5" maxlength="20" placeholder="Enter username (5–20 chars)">
+        <hr>
+
+        <h3>Skills:</h3>
+        <input type="checkbox" id="skill1" name="skills" value="Problem Solving" checked>
+        <label for="skill1">Problem Solving</label><br>
+
+        <input type="checkbox" id="skill2" name="skills" value="Logical Thinking">
+        <label for="skill2">Logical Thinking</label><br>
+
+        <input type="checkbox" id="skill3" name="skills" value="Advanced Search">
+        <label for="skill3">Advanced Search</label><br>
+
+        <input type="checkbox" id="skill4" name="skills" value="Analysis">
+        <label for="skill4">Analysis</label><br>
+
+        <input type="checkbox" id="skill5" name="skills" value="Planning">
+        <label for="skill5">Planning</label><br>
+        <hr>
+
+        <h3>Job:</h3>
+        <input type="radio" id="job1" name="job" value="Front-End Developer" checked>
+        <label for="job1">Front-End Developer</label><br>
+
+        <input type="radio" id="job2" name="job" value="Back-End Developer">
+        <label for="job2">Back-End Developer</label><br>
+
+        <input type="radio" id="job3" name="job" value="Business Analyst">
+        <label for="job3">Business Analyst</label><br>
+
+        <input type="radio" id="job4" name="job" value="Project Manager">
+        <label for="job4">Project Manager</label><br>
+
+        <input type="radio" id="job5" name="job" value="Scrum Master">
+        <label for="job5">Scrum Master</label><br>
+        <hr>
+
+        <label for="field">Programming Field:</label><br>
+        <select name="field" id="field">
+            <optgroup  label="Programming Languages">
+            <option value="Python">Python</option>
+            <option value="Java">Java</option>
+            <option value="C++">C++</option>
+            </optgroup>
+            <optgroup label="Web Development">
+            <option value="HTML" selected>HTML</option>
+            <option value="CSS">CSS</option>
+            <option value="JS">JS</option>
+            </optgroup>
+        </select>
+        <hr>
+        <label for="brief">Brief:</label><br>
+        <textarea name="brief" id="brief" rows="5" cols="50">Write Here Why You Want To Learn Programming</textarea>
+        <hr>
+        <button type="reset">Empty</button>
+        <button type="submit">Send</button>
+
+    </form>
+    
+</body>
+</html>
