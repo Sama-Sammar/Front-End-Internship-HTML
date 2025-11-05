@@ -1,0 +1,72 @@
+🧩 Part 1 — Form Basics
+Create a form that contains three input fields:
+Search
+File
+URL
+Each input must have a label placed before it.
+The Search field should display a placeholder message:“Enter A Search Word”
+When the page loads, the cursor (focus) should be on the Search field.
+The URL field must include the required attribute.
+Add a button named Empty that clears all inputs.
+Make sure the form data is submitted to a new browser tab (not the same page).
+If the user leaves the URL field empty, the form must still submit without showing any error, meaning the required attribute should be ignored.
+🧩 Part 2 — Add Two More Inputs
+Add two more input fields:
+Date
+Month
+Set the default value of:
+Date → 1982-10-25
+Month → 1982-10
+🧩 Part 3 — Text Display
+Write the following text so it appears exactly as shown below in the browser (with the same line breaks and spacing).
+All four lines must be placed inside one element only.
+Hello Line One
+Hello Line Two
+Hello Line Three
+      Hello Line Four
+___________________________________________________________________________________________________________________________________________________________
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment8</title>
+</head>
+<body>
+    <form method="get" target="_blank" novalidate>
+    <div>
+        <label for="Upload">Upload</label>
+        <input id="Upload" type="file" name="Upload"/>
+    </div>
+    <br>
+    <div>
+        <label for="search">Search</label>
+        <input id="search" type="search" placeholder="Enter A Search Word" autofocus name="search" />
+    </div>
+    <br>
+    <div>
+        <label for="url">Url</label>
+        <input id="url" type="url" name="url" required/>
+    </div>
+    <br>
+    <div>
+        <label for="date">Date</label>
+        <input id="date" type="date" value="1982-10-25" name="date"/>
+      </div>
+      <br>
+      <div>
+        <label for="month">Month</label>
+        <input id="month" type="month" value="1982-10" name="month"/>
+      </div>
+      <br>
+    <input type="reset" value="Empty">
+    <input type="submit" value="Send">
+    </form>
+    <pre>
+        Hello Line One
+        Hello Line Two
+        Hello Line Three
+              Hello Line Four
+    </pre>
+</body>
+</html>
